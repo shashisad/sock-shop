@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Plaid API Endpoints",
+    "title": "Plaid API Endpoints for Mazinger",
     "description": "Documentation for how to use this collection, including a Quickstart guide, is on the [Plaid Postman GitHub README](https://github.com/plaid/plaid-postman).\n\nDetailed documentation for Plaid API endpoints is at the [Plaid API reference guide](https://www.plaid.com/docs/api).\n\nBefore you begin, set your `client_id` and `secret_key` variables in the Sandbox environment. You can find them in your Plaid [dashboard](https://dashboard.plaid.com/account/keys). Set the variables by clicking on the 'eye' icon in the top-right corner of the screen.",
     "contact": {},
     "version": "1.0"
