@@ -1,8 +1,7 @@
 openapi: 3.0.0
 info:
   title: http://orders.sock-shop
-  description: Mizu observed 2924005 entries (324640 failed), at 0.473 hits/s, average
-    response time is 0.032 seconds
+  description: Orders Sock Shop API
   version: '1.0'
 servers:
 - url: http://orders.sock-shop
