@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  title: Orders
+  version: '1.0.0'
+  description: Orders API
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  '/orders/{orderNumber}':
+    parameters:
+      - schema:
+          type: string
+        name: orderNumber
+        in: path
+        required: true
+        description: Order Number.
+    get:
+      summary: Get Order Info by Order Number
+      tags: []
+      responses:
+        '200':
+          description: Order Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+              examples:
+                Get Order 560068:
+                  value:
+                    number: "560068"
+                    customerName: Alice
+                    customerLastName: Smith
+                    email: alice.smith@gmail.com
+                    dateOfBirth: '1997-10-31'
+                    emailVerified: true
+                    signUpDate: '2019-08-24'
+                    Product: World of APIs
+        '404':
+          description: Order Not Found
+      operationId: get-orders-orderNum
+      description: Retrieve the information of the Order with the matching Order Number.
+components:
+  schemas:
+    Order:
+      title: Order
+      type: object
+      description: ''
+      properties:
+        number:
+          type: string
+          description: Unique identifier for the given order.
+        customerName:
+          type: string
+        customerLastName:
+          type: string
+        email:
+          type: string
+          format: email
+        dateOfBirth:
+          type: string
+          format: date
+          example: '1997-10-31'
+        emailVerified:
+          type: boolean
+          description: Set to true if the user's email has been verified.
+        createDate:
+          type: string
+          format: date
+          description: The date that the user was created.
+        product:
+          type: string
+          format: string
+          example: World of APIs
+      required:
+        - number
+        - customerName
+        - customerLastName
+        - email
+        - emailVerified
+x-mazinger:
+  gitHubRepo:
+    msg: 'global x-maxinger msg'
+    baseUrl: 'https://github.com/gkulkarni32/acme'
+    subPath: 'orders'
