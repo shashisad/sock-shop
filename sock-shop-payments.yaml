@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Payments API for Mazinger
+  title: Sockshop Payments API
   description: Payments Sock Shop API
   version: '1.0'
 servers:
