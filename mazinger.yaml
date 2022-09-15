@@ -1,0 +1,806 @@
+openapi: 3.0.0
+info:
+  title: Nexus API GW APIs
+  version: 1.0.0
+servers:
+- description: API Gateway
+  url: "/"
+- description: Local
+  url: http://localhost:5000
+- description: Local SSL
+  url: https://localhost:5443
+paths:
+  "/projects/{apix.Project}/apicollaborationspaces":
+    get:
+      operationId: 146399b455ce0b95aa9c75628121ee16633bfa73
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.ApiCollaborationSpace"
+      tags:
+      - ApiCollaborationSpace
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}":
+    get:
+      operationId: 8d2946ee44c63c9eb9fa79683716cc7345721237
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.ApiCollaborationSpace"
+      tags:
+      - ApiCollaborationSpace
+    put:
+      operationId: 360f7caaf3f35aa85ee0231cfe362e69437b54f8
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.ApiCollaborationSpace"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - ApiCollaborationSpace
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apidevspaces":
+    get:
+      operationId: 7955bdfbb9311fb49e60dc8640329226d71706cc
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.ApiDevSpace"
+      tags:
+      - ApiDevSpace
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apidevspaces/{config.ApiDevSpace}":
+    get:
+      operationId: 7c6d73f224d28afecb5f053137522c936a7e9053
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiDevSpace node
+        in: path
+        name: config.ApiDevSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.ApiDevSpace"
+      tags:
+      - ApiDevSpace
+    put:
+      operationId: d2210f775cd342b35db3a7e79f030762571e10e7
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiDevSpace node
+        in: path
+        name: config.ApiDevSpace
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.ApiDevSpace"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - ApiDevSpace
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apilos":
+    get:
+      operationId: 220d1314160be3ccd5077ee6ecdd1fc82409bcac
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.Apilo"
+      tags:
+      - Apilo
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apilos/{config.Apilo}":
+    delete:
+      operationId: 3f01d138894bca6d9c77c96a5b29e06cc169913e
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Apilo node
+        in: path
+        name: config.Apilo
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: No content
+      tags:
+      - Apilo
+    get:
+      operationId: 9097ecec918a3d779d7979d3b7f57d388e7cd79d
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Apilo node
+        in: path
+        name: config.Apilo
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.Apilo"
+      tags:
+      - Apilo
+    put:
+      operationId: d4a32ab0ecf5860253d09610993ab4bf89de1a31
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Apilo node
+        in: path
+        name: config.Apilo
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.Apilo"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - Apilo
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apiruntimes":
+    get:
+      operationId: 7bf68aff8806bc64a716f290722fa6b5e3fb0b88
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.ApiRuntime"
+      tags:
+      - ApiRuntime
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apiruntimes/{config.ApiRuntime}":
+    get:
+      operationId: 80db486d44968baac6d00310a0becc16aebcefc7
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiRuntime node
+        in: path
+        name: config.ApiRuntime
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.ApiRuntime"
+      tags:
+      - ApiRuntime
+    put:
+      operationId: ca781188cbefa590c0ac239dc7c5db367df43921
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiRuntime node
+        in: path
+        name: config.ApiRuntime
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.ApiRuntime"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - ApiRuntime
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apis":
+    get:
+      operationId: a27a50cfd39e252c62780a2cd62db60afbf4c07d
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.Api"
+      tags:
+      - Api
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apis/{config.Api}":
+    get:
+      operationId: ac66bb2ac7a6044cac21332b36c139830ffe87d6
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.Api"
+      tags:
+      - Api
+    put:
+      operationId: 2566a07fdda61c47fa08e0ecacdcf5781fbd49ca
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.Api"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - Api
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apis/{config.Api}/apiversions":
+    get:
+      operationId: f1f4918f8fa4677766f504e614d236e71c717255
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.ApiVersion"
+      tags:
+      - ApiVersion
+  "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apis/{config.Api}/apiversions/{config.ApiVersion}":
+    get:
+      operationId: 4ad990190c5318625a0806f4f57fd90e0bab2fde
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiVersion node
+        in: path
+        name: config.ApiVersion
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.ApiVersion"
+      tags:
+      - ApiVersion
+    put:
+      operationId: ce2791c086a2a72e99c25faee5da0711a7dc6f76
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiVersion node
+        in: path
+        name: config.ApiVersion
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.ApiVersion"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - ApiVersion
+  ? "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apis/{config.Api}/apiversions/{config.ApiVersion}/apibindings"
+  : get:
+      operationId: 790c19ff8f9896523bf986c930721760443abfe7
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiVersion node
+        in: path
+        name: config.ApiVersion
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.ApiBinding"
+      tags:
+      - ApiBinding
+  ? "/projects/{apix.Project}/apicollaborationspaces/{config.ApiCollaborationSpace}/apis/{config.Api}/apiversions/{config.ApiVersion}/apibindings/{config.ApiBinding}"
+  : delete:
+      operationId: 79c0068767c9cf9248f66bd3ee98bbb156053cf5
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiVersion node
+        in: path
+        name: config.ApiVersion
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiBinding node
+        in: path
+        name: config.ApiBinding
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: No content
+      tags:
+      - ApiBinding
+    get:
+      operationId: 944c91510b4abb3057ed64890a005e9a283a7425
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiVersion node
+        in: path
+        name: config.ApiVersion
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiBinding node
+        in: path
+        name: config.ApiBinding
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.ApiBinding"
+      tags:
+      - ApiBinding
+    put:
+      operationId: 68f3a566a89307388c43733325e89b47bb7659b8
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiCollaborationSpace node
+        in: path
+        name: config.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Api node
+        in: path
+        name: config.Api
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiVersion node
+        in: path
+        name: config.ApiVersion
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.ApiBinding node
+        in: path
+        name: config.ApiBinding
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.ApiBinding"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - ApiBinding
+  ? "/projects/{apix.Project}/apicollaborationspaces/{inventory.ApiCollaborationSpace}/apidevspaces/{inventory.ApiDevSpace}/apispecifications"
+  : get:
+      operationId: 0ef84db016f7db8b809a47a3319a85a3c02728f5
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the inventory.ApiCollaborationSpace node
+        in: path
+        name: inventory.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the inventory.ApiDevSpace node
+        in: path
+        name: inventory.ApiDevSpace
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listinventory.ApiSpecification"
+      tags:
+      - ApiSpecification
+  ? "/projects/{apix.Project}/apicollaborationspaces/{inventory.ApiCollaborationSpace}/apidevspaces/{inventory.ApiDevSpace}/apispecifications/{inventory.ApiSpecification}"
+  : get:
+      operationId: eca564fafb9951e2bd60f86f1a4d8b361c2e9bca
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the inventory.ApiCollaborationSpace node
+        in: path
+        name: inventory.ApiCollaborationSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the inventory.ApiDevSpace node
+        in: path
+        name: inventory.ApiDevSpace
+        required: true
+        schema:
+          type: string
+      - description: Name of the inventory.ApiSpecification node
+        in: path
+        name: inventory.ApiSpecification
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getinventory.ApiSpecification"
+      tags:
+      - ApiSpecification
+  "/projects/{apix.Project}/integrations":
+    get:
+      operationId: b37b0409924b792facceecb6c005a3890e1f9808
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Listconfig.Integration"
+      tags:
+      - Integration
+  "/projects/{apix.Project}/integrations/{config.Integration}":
+    get:
+      operationId: 6a419e3860cce531764bf434e886f38f79a79c78
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Integration node
+        in: path
+        name: config.Integration
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          "$ref": "#/components/responses/Getconfig.Integration"
+      tags:
+      - Integration
+    put:
+      operationId: 21e9fc0e739b0a82eb728ae16059c9d95a4e1969
+      parameters:
+      - description: Name of the apix.Project node
+        in: path
+        name: apix.Project
+        required: true
+        schema:
+          type: string
+      - description: Name of the config.Integration node
+        in: path
+        name: config.Integration
+        required: true
+        schema:
+          type: string
+      requestBody:
+        "$ref": "#/components/requestBodies/Createconfig.Integration"
+      responses:
+        '200':
+          "$ref": "#/components/responses/DefaultResponse"
+      tags:
+      - Integration
+x-mazinger:
+  productDisplayName: Nexus API GW APIs
+  documentationReport:
+    overallScore: 26.13441991341991
+    overallCoverage: 31.032909090909094
+    overallQualityScore: 21.235930735930733
+    overallOperationsScore: 51.335467687074825
+    overallOperationsCoverage: 60.9575
+    overallOperationsQualityScore: 41.713435374149654
+  apiScore:
+    overallScore: 1.5388888888888888
+    healthPercentage: 100
+  specStatistics:
+    domains: 9
+    operations: 28
+    getOperations: 18
+  overallGrade: "\U0001F61E"
+  numericGrade: 1
+  overallScore: 187.27005
+  bindingsScorePercentage: 0
+  infoLogs:
+  - level: info
+    message: "[libeve] [rolodex] Attempting to build a product model for '' using
+      spec 'mazinger.json'"
+    time: '2022-09-15T09:39:45.116425289Z'
+  - level: info
+    message: "[libeve] [dom] [builder] Guessed specification parsing mode to be: 'tags'"
+    time: '2022-09-15T09:39:45.122773981Z'
+  - level: info
+    message: "[libeve] [rolodex] Successfully built product model for '' using spec
+      'mazinger.json'"
+    time: '2022-09-15T09:39:45.168321484Z'
+  lintingWarnings: 7964
+  lintingErrors: 113
+  lintingInfo: 28
+  overallHealthPercentage: 70.05538864838864
+  openApiHealthReport:
+    healthPercentage: 84.03174603174604
+  compatibilityHealthReport:
+    healthPercentage: 100
+    backwardCompatibilityReport:
+      healthPercentage: 100
+    forwardCompatibilityReport:
+      healthPercentage: 100
