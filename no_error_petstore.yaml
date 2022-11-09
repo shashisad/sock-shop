@@ -6,7 +6,7 @@ info:
     name: Sample petstore Contact data
     url: 'https://developer.mazinger.com'
     email: developer@petstore.com
-  description: Info block of global contact 
+  description: Info block of global contact - updated desc
   license:
     url: 'https://developer.mazinger.com/license'
     name: MIT
