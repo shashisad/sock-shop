@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   title: Swagger Petstore
   contact:
-    name: Sample petstore Contact data
+    name: Sample new petstore Contact data
     url: 'https://developer.mazinger.com'
     email: developer@petstore.com
   description: Info block of global contact - updated desc
