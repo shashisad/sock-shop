@@ -94,7 +94,7 @@ paths:
                 error: Internal Server Error
                 message: Unable to create order due to unspecified IO error.
                 path: "/orders"
-  "/orders/search/customerId/test":
+  "/orders/search/customerId":
     get:
       tags:
       - orders
