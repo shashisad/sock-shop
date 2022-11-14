@@ -20,7 +20,7 @@ security:
     - write:pets
     - read:pets
 paths:
-  /pets:
+  /pets/test:
     get:
       security:
         - petstore_auth:
