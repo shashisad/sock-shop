@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: sunrise
+  name: backstage-sunrise
   description: The Placeholder API
 spec:
   type: openapi
@@ -10,8 +10,8 @@ spec:
   definition: |
     openapi: 3.0.1
     info:
-      title: Sunrise
-      description: defaultDescription
+      title: Backstage Sunrise
+      description: new backstage sunrise 
       version: '0.1'
     servers:
       - url: https://api.sunrise-sunset.org
