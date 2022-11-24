@@ -4,7 +4,7 @@ info:
   description: Orders Sock Shop API
   version: '1.0'
 servers:
-- url: http://orders.sock-shop
+- url: https://orders.sock-shop
 paths:
   "/orders/test":
     post:
